@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ProjectBoard</title>
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <header class="topbar">
+        <a class="brand" asp-page="/ProjectItems/Index">ProjectBoard</a>
+        <nav>
+            <a asp-page="/ProjectItems/Index">Items</a>
+            <a href="/swagger">Swagger</a>
+        </nav>
+    </header>
+    <main class="shell">
+        @RenderBody()
+    </main>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
