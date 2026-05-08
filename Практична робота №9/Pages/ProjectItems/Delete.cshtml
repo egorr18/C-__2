@@ -1,0 +1,12 @@
+@page "{id:int}"
+@model ProjectBoard.Pages.ProjectItems.DeleteModel
+@{
+    ViewData["Title"] = "Delete Item";
+}
+
+<h1>Delete Project Item</h1>
+<p>Are you sure you want to delete <strong>@Model.Item!.Title</strong>?</p>
+<form method="post">
+    <button class="button danger" type="submit">Delete</button>
+    <a class="button secondary" asp-page="Index">Cancel</a>
+</form>
