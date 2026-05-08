@@ -1,0 +1,21 @@
+@page
+@model ProjectBoard.Pages.ProjectItems.CreateModel
+@{
+    ViewData["Title"] = "Create Item";
+}
+
+<h1>Create Project Item</h1>
+<form method="post" class="form-grid">
+    <div asp-validation-summary="ModelOnly"></div>
+    <label>Title <input asp-for="Input.Title" /></label>
+    <span asp-validation-for="Input.Title"></span>
+    <label>Description <textarea asp-for="Input.Description" rows="5"></textarea></label>
+    <span asp-validation-for="Input.Description"></span>
+    <label>Project Id <input asp-for="Input.ProjectId" /></label>
+    <span asp-validation-for="Input.ProjectId"></span>
+    <label>Assigned User Id <input asp-for="Input.AssignedUserId" /></label>
+    <label>Status <select asp-for="Input.Status" asp-items="Html.GetEnumSelectList<ProjectItemStatus>()"></select></label>
+    <label>Priority <select asp-for="Input.Priority" asp-items="Html.GetEnumSelectList<Priority>()"></select></label>
+    <button class="button" type="submit">Create</button>
+    <a asp-page="Index">Back to list</a>
+</form>
