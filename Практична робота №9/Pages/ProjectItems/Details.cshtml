@@ -1,0 +1,19 @@
+@page "{id:int}"
+@model ProjectBoard.Pages.ProjectItems.DetailsModel
+@{
+    ViewData["Title"] = "Item Details";
+}
+
+<h1>@Model.Item!.Title</h1>
+<section class="details">
+    <div><strong>Description:</strong> @Model.Item.Description</div>
+    <div><strong>Project:</strong> @Model.Item.ProjectName</div>
+    <div><strong>Status:</strong> @Model.Item.Status</div>
+    <div><strong>Priority:</strong> @Model.Item.Priority</div>
+    <div><strong>Assignee:</strong> @(Model.Item.AssignedUserName ?? "Unassigned")</div>
+    <div><strong>Comments:</strong> @Model.Item.CommentsCount</div>
+</section>
+<p>
+    <a asp-page="Edit" asp-route-id="@Model.Item.Id">Edit</a> |
+    <a asp-page="Index">Back to list</a>
+</p>
