@@ -1,0 +1,143 @@
+:root {
+    color-scheme: light;
+    --ink: #1f2937;
+    --muted: #667085;
+    --line: #d0d5dd;
+    --panel: #ffffff;
+    --surface: #f6f8fb;
+    --accent: #0f766e;
+    --danger: #b42318;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: var(--surface);
+    color: var(--ink);
+}
+
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 28px;
+    border-bottom: 1px solid var(--line);
+    background: #fff;
+}
+
+.brand {
+    font-weight: 700;
+    color: var(--ink);
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    gap: 18px;
+}
+
+a {
+    color: var(--accent);
+}
+
+.shell {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 28px;
+}
+
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 18px;
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 38px;
+    padding: 8px 14px;
+    border: 1px solid var(--accent);
+    background: var(--accent);
+    color: #fff;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.button.secondary {
+    background: #fff;
+    color: var(--accent);
+}
+
+.button.danger {
+    border-color: var(--danger);
+    background: var(--danger);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--panel);
+    border: 1px solid var(--line);
+}
+
+th,
+td {
+    padding: 12px;
+    border-bottom: 1px solid var(--line);
+    text-align: left;
+    vertical-align: top;
+}
+
+th {
+    background: #eef4f3;
+}
+
+.form-grid {
+    display: grid;
+    gap: 14px;
+    max-width: 720px;
+}
+
+label {
+    display: grid;
+    gap: 6px;
+    font-weight: 600;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    font: inherit;
+}
+
+.validation-summary-errors,
+.field-validation-error {
+    color: var(--danger);
+}
+
+.details {
+    display: grid;
+    gap: 10px;
+    max-width: 760px;
+    padding: 18px;
+    border: 1px solid var(--line);
+    background: var(--panel);
+    border-radius: 8px;
+}
+
+.muted {
+    color: var(--muted);
+}
